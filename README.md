@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+Claro, aquí tienes un ejemplo de cómo podrías estructurar un archivo `README.md` para tu proyecto:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Mercado Libre Search App (Buscador en Paginas para APX.school)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta aplicación permite a los usuarios buscar productos en Mercado Libre y visualizar los resultados de la búsqueda. Además, ofrece la posibilidad de ver más detalles sobre cada producto. Es un desafio de la carrera de FullStack en APX.school del nivel 3 donde esta aprendiendo React, React Router, etc.
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Búsqueda de Productos**: La aplicación utiliza la API de Mercado Libre para buscar productos según el término ingresado por el usuario.
+- **Visualización de Resultados**: Los resultados de la búsqueda se muestran en forma de tarjetas, mostrando la imagen del producto, su título y un enlace para ver más detalles.
+- **Detalle del Producto**: Al hacer clic en "Ver más", se muestra una página con más detalles del producto seleccionado, incluyendo su precio.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tecnologías Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React**: Se utiliza para crear los componentes de la interfaz de usuario.
+- **React Router**: Para manejar las rutas de la aplicación.
+- **API de Mercado Libre**: Se utiliza para obtener los datos de los productos.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estructura del Proyecto
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+El proyecto está organizado en componentes y rutas principales:
+
+- **Componentes**:
+  - `Card`: Muestra una tarjeta con información básica de un producto.
+  - `Home`: Página principal que muestra un mensaje de bienvenida.
+  - `SearchForm`: Formulario para ingresar el término de búsqueda.
+  - `SearchResult`: Muestra los resultados de la búsqueda.
+  - `Resume`: Muestra detalles de un producto específico.
+- **Rutas**:
+  - `/`: Página principal.
+  - `/search/:query`: Muestra los resultados de la búsqueda.
+  - `/item/:id`: Muestra detalles de un producto.
+
+## Instrucciones para Ejecutar el Proyecto
+
+1. Clona el repositorio.
+2. Instala las dependencias con `npm install`.
+3. Inicia el proyecto con `npm start`.
+4. Abre el navegador en `http://localhost:3000`.
+
+## Contribuciones
+
+Si deseas contribuir al proyecto, puedes hacerlo mediante pull requests. Asegúrate de seguir las mejores prácticas de desarrollo y documentación.
