@@ -1,7 +1,3 @@
-Claro, aquí tienes un ejemplo de cómo podrías estructurar un archivo `README.md` para tu proyecto:
-
----
-
 # Mercado Libre Search App (Buscador en Paginas para APX.school)
 
 Esta aplicación permite a los usuarios buscar productos en Mercado Libre y visualizar los resultados de la búsqueda. Además, ofrece la posibilidad de ver más detalles sobre cada producto. Es un desafio de la carrera de FullStack en APX.school del nivel 3 donde esta aprendiendo React, React Router, etc.
